@@ -29,6 +29,13 @@ export default class {
     }
 
 
+    initStrings() {
+        si.on('capitalize', item => {
+          si.emit('capital', understring.capitalize(item));
+        });
+    }
+
+
     start() {
         si.on('connection',  socket => {
            console.log('connect');
@@ -44,11 +51,5 @@ export default class {
 
     }
 }
-
-
-si.on('capitalize', item => {
-    si.emit('capital', understring.capitalize(item));
-});
-
 
 
