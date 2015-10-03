@@ -1,0 +1,29 @@
+{
+  "name": "socketio-advanced",
+  "version": "0.0.1",
+  "description": "Several useful events for socket-io",
+  "main": "index.js",
+  "scripts": {
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile",
+    "test": "mocha test"
+  },
+  "keywords": [
+    "socket-io",
+    "moment",
+    "underscore"
+  ],
+  "author": "Sergey Romanov <xxsmotur@gmail.com> (https://github.com/saromanov)",
+  "license": "MIT",
+  "dependencies": {
+    "core-js": "*",
+    "express": "^4.13.3",
+    "moment": "^2.10.6",
+    "socket.io": "^1.3.7",
+    "underscore.string": "^3.2.2"
+  },
+  "devDependencies": {
+    "babel": "*",
+    "mocha": "*"
+  }
+}
