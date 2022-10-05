@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "compile": "babel -d lib/ src/",
-    "prepublish": "npm run compile",
-    "test": "mocha test"
+    "prepublish": "npm run snyk-protect && npm run compile",
+    "test": "mocha test",
+    "snyk-protect": "snyk-protect"
   },
   "keywords": [
     "socket-io",
@@ -19,11 +20,13 @@
     "core-js": "*",
     "express": "^4.13.3",
     "moment": "^2.10.6",
-    "socket.io": "^1.3.7",
-    "underscore.string": "^3.2.2"
+    "socket.io": "^3.0.0",
+    "underscore.string": "^3.2.2",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "babel": "*",
     "mocha": "*"
-  }
+  },
+  "snyk": true
 }
